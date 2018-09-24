@@ -1,0 +1,22 @@
+table{
+    border: 2px solid;
+    border-color: rgb(66, 185, 131);
+    padding: 0.5px;
+    width: 350px;
+}
+th{
+    margin: 0.5px;
+    padding: 5px;
+    text-align: center;
+    background-color:rgb(66, 185, 131);
+    border:none;
+    color: #ffffff;
+}
+td{
+    margin: 0.5px;
+    padding: 5px;
+    padding-left: 10px;
+    text-align: left;
+    border: none;
+    background-color: rgb(249, 249, 249);
+}
