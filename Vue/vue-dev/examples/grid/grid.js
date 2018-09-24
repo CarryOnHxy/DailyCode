@@ -13,7 +13,7 @@ Vue.component('demo-grid', {
       sortOrders[key] = 1
     })
     return {
-      sortKey: '',
+      sortKey: '',//排序字段，同时也是data原数据里的属性
       sortOrders: sortOrders
     }
   },
@@ -30,6 +30,13 @@ Vue.component('demo-grid', {
           })
         })
       }
+      /*好的排序写法
+        按自己的理解如果要写排序方法，可能会写一个升序一个降序
+        因为其核心代码 升序:return a-b 降序:return b-a有两种
+        情况，但是代码冗余，这里的写法是将sort函数，返回的时候
+        a与b进行比较,之后乘上当前排序状态order（升序或者降序），
+        这样一个方法就集合了升序与降序 
+      */
       if (sortKey) {
         data = data.slice().sort(function (a, b) {
           a = a[sortKey]
