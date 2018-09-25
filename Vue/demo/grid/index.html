@@ -17,8 +17,8 @@
             <span>Search</span>
             <input type="text" v-model="key">
         <table>
-         <th @click="orderByName">Name</th>
-            <th>Power</th>
+         <th @click="orderBy('name')">Name</th>
+            <th @click="orderBy('power')">Power</th>
             <tr v-for="v in result">
                 <td>{{v.name}}</td>
                 <td>{{v.power}}</td>

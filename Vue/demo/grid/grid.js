@@ -12,8 +12,7 @@ var app = new Vue({
     el:'#app',
     data:{
         key:null,
-        nameAsc:false,
-        powerAsc:false,
+        sortOrders:{name:1,power:1},
         gridData:[
             { name: 'Chuck Norris', power: Infinity },
             { name: 'Bruce Lee', power: 9000 },
@@ -31,6 +30,11 @@ var app = new Vue({
                 })
             }
       
+        }
+    },
+    methods:{
+        orderBy(){
+            
         }
     }
 })
