@@ -13,6 +13,7 @@ var app = new Vue({
     data:{
         key:null,
         sortOrders:{name:1,power:1},
+        field:null,
         gridData:[
             { name: 'Chuck Norris', power: Infinity },
             { name: 'Bruce Lee', power: 9000 },
@@ -21,20 +22,28 @@ var app = new Vue({
     },
     computed:{
         result(){
-            console.log('computing');
             var key = this.key;
             var gridData = this.gridData;
+            var field = this.field;
+            var sortOrders = this.sortOrders;
             if(key){
                 return gridData.filter(function(v){
                     return v.name.indexOf(key)!=-1||(v.power+'').indexOf(key)!=-1
                 })
             }
-      
+            if(field){
+                console.log('change ');
+                return this.gridData.slice().sort(function(a,b){
+                    return a[field]==b[field]?0:a[field]>b[field]?1:-1*sortOrders[field];
+                })
+            }
+            return this.gridData;
         }
     },
     methods:{
-        orderBy(){
-            
+        orderBy(field){
+            this.field = field;
+            this.sortOrders[field]*=-1;
         }
     }
 })
