@@ -2,7 +2,8 @@
   "pages":[
     "pages/show/show",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/dice/dice"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -22,6 +23,10 @@
       {
         "pagePath": "pages/logs/logs",
         "text": "日志"
+      },
+      {
+        "pagePath": "pages/dice/dice",
+        "text": "摇骰子"
       }
     ]
   }
