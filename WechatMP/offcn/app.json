@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/show/show",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -10,10 +11,13 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
+     "color": "green",
+     "selectedColor":"red",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/show/show",
         "text": "首页"
+ 
       },
       {
         "pagePath": "pages/logs/logs",

@@ -19,6 +19,3 @@
 .usermotto {
   margin-top: 200px;
 }
-.container{
-  background-color: #ccc;
-}
