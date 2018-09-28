@@ -1,0 +1,56 @@
+/* pages/caculator/caculator.wxss */
+
+page {
+  background: #000;
+}
+
+.displayPanel {
+  position: fixed;
+  top: 0;
+  /* border: 1px solid red; */
+  width: 750rpx;
+  height: 350rpx;
+}
+
+.content {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  color: #fff;
+  float: right;
+}
+
+.content text {
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.inputPanel {
+  width: 750rpx;
+  height: 750rpx;
+  position: fixed;
+  bottom: 0;
+  border: 1px solid #fff;
+}
+
+.row {
+  display: flex;
+}
+
+.inputPanel button {
+  width: 188rpx;
+  height: 150rpx;
+  text-align: center;
+  padding: 20rpx;
+  border-radius:0;
+}
+
+.inputPanel .zero {
+  width: 385rpx;
+  height: 150rpx;
+  text-align: center;
+  padding: 20rpx;
+}
+.operator{
+  background: rgb(230, 164, 67);
+}

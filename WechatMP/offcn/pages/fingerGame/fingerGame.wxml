@@ -1,0 +1,20 @@
+<!--pages/fingerGame/fingerGame.wxml-->
+<view class='title'>
+  <text>你已经获胜了{{num}}次</text>
+</view>
+
+<view class='gameInfo'>
+  <image src="{{aiInfo.imgUrl}}"></image>
+  <view class='result'>{{result}}</view>
+  <image src="{{userUrl}}"></image>
+</view>
+<view class='userInfo'>
+  <view class='userTitle'><text>出拳吧少年</text></view>
+  <view class='fingers'>
+    <block wx:for="{{fingerInfo}}" >
+    
+      <image src="{{item.imgUrl}}"bindtap='click' id="{{index}}"></image>
+    </block>
+  </view>
+  <button bindtap='again'>再来一次</button>
+</view>

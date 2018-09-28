@@ -1,9 +1,8 @@
 {
   "pages":[
-    "pages/show/show",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/dice/dice"
+    "pages/fingerGame/fingerGame",
+    "pages/dice/dice",
+    "pages/caculator/caculator"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -12,20 +11,26 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-     "color": "green",
-     "selectedColor":"red",
+     "color": "rgb(179,179,180)",
+     "selectedColor":"black",
     "list": [
       {
-        "pagePath": "pages/show/show",
-        "text": "首页"
+        "pagePath":"pages/fingerGame/fingerGame",
+        "selectedIconPath":"./images/猜拳.png",
+        "iconPath":"./images/猜拳.png",
+        "text": "猜拳"
  
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/caculator/caculator",
+        "selectedIconPath": "./images/计算器.png",
+        "iconPath": "./images/计算器.png",
+        "text": "计算器"
       },
       {
         "pagePath": "pages/dice/dice",
+        "selectedIconPath": "./images/骰子.png",
+        "iconPath": "./images/骰子.png",
         "text": "摇骰子"
       }
     ]

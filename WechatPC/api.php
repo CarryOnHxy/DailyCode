@@ -51,7 +51,7 @@ class WechatPC{
     /* 实现curl方法
         A.curl初始化
         B.设置访问API
-        B.curl设置选项
+        B.curl设置选项（有安全认证的需要设置跳过安全认证）
         C.curl执行访问API
         D.将获得到的数据转换成字符串（不转换是一个为知类型，VD输出试一试）
         E.关闭curl

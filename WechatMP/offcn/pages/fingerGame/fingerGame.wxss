@@ -1,0 +1,44 @@
+/* pages/fingerGame/fingerGame.wxss */
+page{
+  background: rgb(255, 251, 230)
+}
+.title{
+  text-align: center;
+  padding: 50rpx;
+}
+.gameInfo{
+  justify-content: center;
+  display: flex;
+}
+.gameInfo image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.result{
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 150rpx;
+  font-weight: bold;
+}
+.userInfo{
+  background: #fff;
+  height: 700rpx;
+  width: 650rpx;
+  margin: 20rpx auto;
+}
+.userTitle{
+  text-align: center;
+  padding: 30rpx;
+}
+.fingers{
+  display: flex;
+}
+.fingers image{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx;
+}
+.userInfo button{
+  margin-top: 100rpx;
+}

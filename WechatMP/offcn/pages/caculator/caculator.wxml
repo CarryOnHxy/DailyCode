@@ -1,0 +1,15 @@
+<!--pages/caculator/caculator.wxml-->
+<view class='displayPanel'>
+  <view class='content'>
+    <text>{{view}}</text>
+  </view>
+</view>
+<view class='inputPanel' bindtap='click'> 
+  <block wx:for="{{btnInfo}}" wx:for-item="i" wx:key='i'>
+    <view class='row'>
+      <block wx:for="{{i}}" wx:for-item="j" wx:key='j'>
+        <button class="{{j.type}}" data-val="{{j.val}}" data-type="{{j.type}}" >{{j.val}}</button>
+      </block>
+    </view>
+  </block>
+</view>
