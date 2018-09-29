@@ -4,26 +4,31 @@
 个扔入海中，拿走了一份。第二只猴子把剩下的桃子又平均分成五份，又多了一个，它同样把多的一个扔入海中
 ，拿走了一份，第三、第四、第五只猴子都是这样做的，问海滩上原来最少有多少个桃子？
 */
-//$num-1-($num-1/5)
-/* 
-    A.递归函数 (参数为 总桃子数，当前递归次数)
-    B.无限循环调用递归，递归次数==5说明桃子分成功了
+
+
+echo '<pre>';
+/* 递归函数，当能够被5只猴子所分返回true
+   满足分配规则$peachNum%5==1时
+   A.  猴子数+1   
+   B.  执行分配 分配后剩余($peachNum-1)/5*4 
+   C.  继续调用递归直到猴子数为5
 */
 
-function getPeach($peachNum,$current){
-    echo 'current: ',$current,'<br>';
-    if($current==4) echo '桃子';
-    if($peachNum%5==1&&$peachNum>5) getPeach(($peachNum-1)/5*4,$current+1);
-  
+function getPeach($peachNum,$monkey){
+    if($peachNum%5==1){
+        if(++$monkey==5)return true;
+        return getPeach(($peachNum-1)/5*4,$monkey);
+    } 
+    return false;
 }
 
-for($num=0;$num<=10000;$num++){
-    echo 'num: ',$num,'<br>';
-    var_dump(getPeach($num,0));
-    // var_dump(getPeach($num,0),'<br>');
-    // if(getPeach($num,0)){
-    //     break;
-    // }
-}
+$peachNum =0;
+$monkey = 0;
 
-// var_dump(getPeach());
+while(1){
+    if(getPeach($peachNum,$monkey)){
+        echo "当桃子数为$peachNum 时,足够被五只猴子分完";
+        break;
+    }
+    $peachNum++;
+}

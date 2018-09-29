@@ -29,7 +29,7 @@ Page({
       { val: '.' },
       { val: '=', type: 'operator'}
     ]],
-    view:'0',
+    view:'',
     nums:[],
     operators:[]
   },
@@ -45,6 +45,8 @@ Page({
               出队2次操作数数组
           II.多路分支执行不同运算
               改变view
+        B2.不是'='号
+              将操作符和操作数入栈
     D.判断是否其他功能运算符
       退格符
       清空符
@@ -59,15 +61,16 @@ Page({
   /* 判断是否数字以及小数点 */
   judgeNum(tData){
     var view = this.data.view;
+    console.log(typeof (this.data.view));
     if (typeof tData.val == 'number') {
       this.setData({
-        view: this.data.view += tData.val
+        view: this.limit(this.data.view += tData.val)
       })
       return;
     }
     if(tData.val=='.'&&view.indexOf('.')==-1){
         this.setData({
-          view: this.data.view += tData.val
+          view: this.limit( this.data.view += tData.val)
         })
     }
   },
@@ -77,12 +80,13 @@ Page({
       var nums = this.data.nums;
       var res = null;
       if (str) {
-        if (tData.val == '=') {
+        if (tData.val == '=' && nums.length == 1) {
           this.data.nums.push(str * 1);
           this.data.operators.forEach((o) => {
             var a = this.data.nums.shift();
             var b = this.data.nums.shift();
             console.log(a, b);
+
             switch (o) {
               case '+':
                  res = a + b;
@@ -94,33 +98,45 @@ Page({
                 break;
               case '/':  res = a / b;
             }
+
             this.data.nums.unshift(res);
           })
+
           this.setData({
-            view: res + '',
+            view: this.limit(res + '',true),
             operators: [],
             nums: []
           })
           return;
         }
-        this.data.operators.push(tData.val);
-        var num = str * 1;
-        nums.push(num);
-        this.setData({
-          view: '',
-          nums: nums,
-          operators: this.data.operators
-        })
+        if(tData.val!='='){
+          var num = str * 1;
+          nums.push(num);
+          this.data.operators.push(tData.val);
+          this.setData({
+            view: '',
+            nums: nums,
+            operators: this.data.operators
+          })
+        }
+
       }
     }
   },
+  /* 判断其他功能键 
+      取反键
+      清除键
+      退格键
+  */
   judgeOt(tData){
     if(tData.type=='other'){
       switch(tData.val){
         case '±' :
-            var view = '-'+this.data.view;
-            this.setData({view:view});
-            break;
+        if(tData.val!='0'){
+          var view =  this.data.view*-1+'';
+          this.setData({ view: view });
+        }
+          break;
         case 'C':
             this.setData({
               view: '',
@@ -133,6 +149,13 @@ Page({
           this.setData({view:view})
       }
     }
+  },
+  /* 限制输入位数为7位 
+        isPoint为true代表需要
+        解决0.1+0.2的精度问题，一句代码就为了解决一个问题。。。。需改善
+  */
+  limit(str,isPoint){
+    return isPoint?(Math.round(str*1*10)/10)+'':str.substr(0,7);
   }
 }
 
