@@ -1,0 +1,13 @@
+<!--pages/detail/detail.wxml-->
+<view class='main_pic'>
+  <image src='{{img}}'></image>
+</view>
+<view class='title' bindtap='collect' id="{{id}}">
+    <image class='heart' src='../images/xin.png'></image>
+    <text>{{title}}</text>
+</view>
+<view class='divider'>
+</view>
+<view class='text'>
+{{text}}
+</view>

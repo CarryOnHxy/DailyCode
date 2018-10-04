@@ -1,0 +1,25 @@
+/* pages/shortStory/shortStory.wxss */
+page{
+  background: rgb(250, 250, 250);
+}
+.list-item{
+  display: flex;
+  width: 750rpx;
+  height: 250rpx;
+  overflow: hidden;
+  border-bottom:1px solid #ccc 
+}
+.list-item-image image{
+  width: 250rpx;
+  height:250rpx
+}
+.title{
+  text-align: center;
+}
+.title-con{
+  line-height:1.5;
+}
+.desc{
+  font-size: 30rpx;
+  overflow: hidden
+}

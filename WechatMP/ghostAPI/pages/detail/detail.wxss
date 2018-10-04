@@ -1,0 +1,28 @@
+/* pages/detail/detail.wxss */
+.main_pic image{
+  width: 750rpx;
+  height: 500rpx;
+}
+.title text{
+  margin-left:30rpx; 
+  margin-top: 50rpx;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10rpx;
+  line-height: 44rpx;
+  letter-spacing: 2px;
+}
+.heart{
+  float: right;
+  width: 80rpx;
+  height: 80rpx;
+}
+.divider{
+  margin: 20px;
+  background-color: #ccc;
+  width: 660rpx;
+}
+.text{
+  color: #666;
+  padding: 10rpx;
+}

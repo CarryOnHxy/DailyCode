@@ -1,0 +1,21 @@
+<!--pages/shortStory/shortStory.wxml-->
+
+  <block wx:for='{{list}}'>
+  <navigator url="../detail/detail?id={{item.link}}&img={{item.img}}&title={{item.title}}">
+    <view class='list-item' bindtap='clickItem' id="{{item.link}}">
+      <view class='list-item-image'>
+        <image src='{{item.img}}'></image>
+      </view>
+      <view class='list-item-con'>
+        <view class='title'>
+          <text class='title-con'>{{item.title}}</text>
+        </view>
+        <view class="desc">
+          {{item.desc}}
+        </view>
+      </view>
+    </view>
+    </navigator>
+  </block>
+  <view hidden="{{isLoading}}">正在加载中，请稍等</view>
+  <view hidden="{{isAll}}">没有再多的数据</view>

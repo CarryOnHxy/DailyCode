@@ -1,0 +1,19 @@
+<view>
+  <picker mode='selector' range="{{countries}}" bindchange='clickPicker' bindcancel='canclePicker'>
+    single
+  </picker>
+  <picker mode='multiSelector' range='{{sports}}' value='{{[2,2,2]}}' bindcolumnchange='columnchange'>
+    multiselector
+  </picker>
+  <picker mode='time' start='18:30' end='19:00'>
+    time
+  </picker>
+    <picker mode='date' start='2018:9:28' end='2020:2:25'  fields='month' bindchange='getDate'>
+    date
+  </picker>
+    <picker mode="region" bindchange="bindRegionChange" custom-item="{{customItem}}">
+    <view class="picker">
+      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+</view>

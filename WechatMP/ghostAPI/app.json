@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/shortStory/shortStory",
+    "pages/longStory/longStory",
+    "pages/hospital/hospital",
+    "pages/school/school",
+    "pages/amazing/amazing",
+    "pages/detail/detail",
+    "pages/collection/collection"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "魑魅魍魉",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true
+  },
+
+  "tabBar": { 
+    "list": [
+      {
+        "pagePath": "pages/shortStory/shortStory",
+        "text": "短篇"
+      },
+      {
+        "pagePath": "pages/longStory/longStory",
+        "text": "长篇"
+      },
+      {
+        "pagePath": "pages/hospital/hospital",
+        "text": "医院"
+      },
+      {
+        "pagePath": "pages/school/school",
+        "text": "校园"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "text": "收藏"
+      }
+    ],
+    "position":"top"
+  }
+}
