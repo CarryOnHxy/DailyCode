@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table style="margin:0 auto" cellspacing="10">
+        <tr>
+            <td><span style="color:red">*</span>用户名:</td>
+            <td><input type="text" name="username" placeholder="用户名设置成功后不可修改">
+            </td>
+            <td style="color:orange">6-30位字母、数字或"_",字母开头</td>
+        </tr>
+        <tr>
+            <td><span style="color:red">*</span>登录密码:</td>
+            <td><input type="text" placeholder="6-20位字母、数字或符号"></td>
+            <td><span>6666</span></td>
+        </tr>
+         
+        <tr>
+            <td><span style="color:red">*</span>确认密码:</td>
+            <td colspan="2">
+                <input type="text" placeholder="再次输入您的登录密码"></td>
+        </tr>
+        
+        <tr>
+            <td><span style="color:red">*</span>姓名:</td>
+            <td><input type="text" placeholder="请输入您的姓名"></td>
+            <td><a href="#" style="color:orange">姓名填写规则</a></td>
+        </tr>
+       
+        <tr>
+            <td><span style="color:red">*</span>证件类型:</td>
+            <td colspan="2">
+                <select name="verification">
+                    <option value="1">第1代身份证</option>
+                    <option value="2">第2代身份证</option>
+                </select></td>
+        </tr>
+         
+        <tr>
+            <td><span style="color:red">*</span>证件号码:</td>
+            <td colspan="2">
+                <input type="text" placeholder="请输入您的证件号码"></td>
+        </tr>
+        
+        <tr>
+            <td>邮箱:</td>
+            <td colspan="2"><input type="text" placeholder="请输入您的邮箱"></td>
+        </tr>
+        
+        <tr>
+            <td><span style="color:red">*</span>手机号码:</td>
+            <td><input type="text" placeholder="请输入您的手机号码"></td>
+            <td style="color:orange">请正确填写手机号码,稍后将向改手机号码发送短信验证码</td>
+        </tr>
+        
+        <tr>
+            <td><span style="color:red">*</span>旅客类型:</td>
+            <td colspan="2">
+                <select name="verification">
+                    <option value="1">成人</option>
+                    <option value="2">儿童</option>
+                </select></td>
+        </tr>
+       
+        <tr>
+            <td colspan="3">
+                <input type="checkbox" name="isObeied"> 我已阅读并同意遵守《中国铁路客户服务中心网站服务条款》
+            </td>
+        </tr>
+         
+        <tr>
+            <td colspan="3"><button>下一步</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

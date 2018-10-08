@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <caption>
+            简单单元格
+        </caption>
+        <tr>
+            <th>表头单元格</th>
+            <th>表头单元格</th>
+        </tr>
+        <tr>
+            <td>普通单元格</td>
+            <td>普通单元格</td>
+        </tr>
+    </table>
+    <!-- thead和tfoot用来对头尾单元格内容进行分组，其在网页显示的位置始终是表头与
+    表尾,与其代码位置无关 一般其在table里的代码位置次序为 thead tfoot tbody,
+    这样在显示tbody之前能够先显示表头与表尾 -->
+    <table>
+        <thead>
+            <tr>
+                <th>表头单元格</th>
+                <th>表头单元格</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>表尾单元格</td>
+                <td>表尾单元格</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>表内单元格</td>
+                <td>表内单元格</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- collaspe样式代表单元格之间没有间距 -->
+    <table border="1" style="border-collapse:collapse" cellpadding="10">
+        <tr>
+            <th rowspan="2" >性别</th>
+            <th>男生人数</th>
+            <th>15</th>
+        </tr>
+        <tr>
+            <td>女生人数</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td colspan="2">总人数</td>
+            <td>35</td>
+        </tr>
+    </table>
+    <form action="demo.html" target="_blank">
+        <button>Submit to demo.html</button>
+    </form>
+    <form action="https://www.baidu.com" target="_blank">
+        <button>Submit to BaiDu</button>
+    </form>
+    <form action="test.txt">
+        <button>Open test.txt</button>
+    </form>
+    <form action="" enctype="multipart/form-data">
+        <input type="file" name="files" id="file">
+    </form>
+</body>
+
+</html>
