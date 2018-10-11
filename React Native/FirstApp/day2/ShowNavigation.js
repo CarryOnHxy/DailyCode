@@ -12,12 +12,11 @@ import { StyleSheet, Text, View } from "react-native";
 /* 暴露组件 
     引入下拉列表组件
 */
-export default class HelloWorld extends Component {
+const Navigation  = require('./Navigation');
+export default class ShowNavigation extends Component {
   render() {
     return (
-      <View>
-        <Text>6666</Text>
-      </View>
+        <Navigation />//父容器不能是View，因为Navigation本身是一个注册由组件
     );
   }
 }

@@ -12,11 +12,12 @@ import { StyleSheet, Text, View } from "react-native";
 /* 暴露组件 
     引入下拉列表组件
 */
+const Scroll = require('./Scroll');
 export default class HelloWorld extends Component {
   render() {
     return (
       <View>
-        <Text>6666</Text>
+        <Scroll />
       </View>
     );
   }

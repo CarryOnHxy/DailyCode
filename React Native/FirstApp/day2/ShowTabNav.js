@@ -9,15 +9,15 @@
 /* 引入组件区 */
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-/* 暴露组件 
-    引入下拉列表组件
-*/
-export default class HelloWorld extends Component {
+/* 
+    功能：展示选项卡
+
+*/  
+const TabNav = require('./TabNav');                                     
+export default class ShowTabNav extends Component {
   render() {
     return (
-      <View>
-        <Text>6666</Text>
-      </View>
+      <TabNav />
     );
   }
 }
