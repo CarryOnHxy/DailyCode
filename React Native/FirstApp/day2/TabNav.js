@@ -51,12 +51,12 @@ const TabOptions = {
         activeTintColor:'green'
     }
 }
-const Tab = TabNavigator(SelectTab,TabOptions);
+const Tab = TabNavigator(SelectTab,TabOptions);//选项卡设置函数  估计返回的是一个组件来的，要不然下面可以标签引用
 export default class TabNav extends Component {
     
     render() {
       return (
-        <Tab />
+        <Tab />//引入选项卡组件
       );
     }
 }

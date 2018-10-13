@@ -20,14 +20,14 @@ export default class ShowFlatList extends Component {
   render() {
     return (
       <FlatList 
-        data={movieData}
-        renderItem={this.renderItem}
-        ListHeaderComponent={this.ListHeaderComponent}
-        ListFooterComponent={this.ListFooterComponent}
-        ItemSeparatorComponent={this.ItemSeparatorComponenting}
-        refreshing={false}
-        onRefresh={this.onRefreshing}  
-        onEndReached={this.onEndReached}
+        data={movieData}//绑定数据 必需
+        renderItem={this.renderItem}//渲染数据格式 必需
+        ListHeaderComponent={this.ListHeaderComponent}//给予列表头组件
+        ListFooterComponent={this.ListFooterComponent}//给予列表尾组件
+        ItemSeparatorComponent={this.ItemSeparatorComponenting}//item的分割组件
+        refreshing={false}//是否下拉一直刷新
+        onRefresh={this.onRefreshing}  //下拉刷新触发函数
+        onEndReached={this.onEndReached}//底部数显触发函数
       ></FlatList>
     );
   }
