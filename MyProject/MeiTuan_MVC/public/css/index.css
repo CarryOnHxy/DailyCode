@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#header {
+    background: #F8F8F8;
+}
+
+#header .sub-container {
+    width: 1190px;
+    height: 100%;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #E5E5E5;
+    margin-top: 100px;
+}
+
+.check {
+    display: inline-block;
+    margin-top: 20px;
+    width: 500px;
+}
+.check span:hover{
+    cursor: pointer;
+    color: #13D1BE;
+}
+.tips {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    vertical-align: top;
+    display: inline-block;
+    padding: 5px;
+}
+
+.choose {
+    width: 100px;
+    margin: 0 10px 0 20px;
+    background: white;
+}
+.search{
+    display: inline-block;
+    margin-left: 50px;
+    position: relative;
+}
+.search input{
+    padding: 5px;
+    border-radius:4px;
+    border: 1px solid #E5E5E5;
+}
+
+.suggest-city-wapper {
+    overflow-y: scroll;
+    min-width: 150px;
+    max-height: 375px;
+    padding: 0 20px 0 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+    position: absolute;
+    left: 85px;
+    list-style: none;
+}
+#header .provinceTitle {
+    color: #ccc;
+    font-size: 15px;
+}
+#header .dropdown-menu{
+    min-width: 300px;
+}
+#header .dropdown-menu div{
+    margin-top:10px;
+}
+.cities div {
+    text-align: center;
+    margin: 2px auto;
+}
+
+#header .title {
+    color: #ccc;
+    font-size: 18px;
+    padding: 15px;
+    margin-bottom: 7px;
+}
+.list-info{
+    display: flex;
+    flex-direction: row;
+}
+.provinceName {
+    text-align: center;
+    width: 200px;
+}
+.provinceName:hover{
+    cursor: pointer;
+}
+.cityName div{
+    display: inline-block;
+    margin:5px;
+}
+.cityName div:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,83 @@
+@import './reset.css';
+body{
+    margin: 0 auto;
+    width: 1100px;
+}
+.header_nav{
+    height: 120px
+}
+.logo_con{
+    float: left;
+    position: relative;
+    width: 160px;
+    height: 100%;
+}
+.logo{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.search_con{
+    float: right;
+    position: relative;
+    height: 100%;
+}
+.search_con>img{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.header_tab{
+
+    float: right;
+    display:flex;
+    flex-direction: row;
+    width: 300px
+}
+.header_tab>li{
+    flex: 1;
+    display: inline-block;
+    line-height: 120px;
+    text-align: center;
+    font-size: 14px;
+}
+.header_tab>li:hover{
+    border-top: 3px solid rgb(160, 207, 79);
+    color: rgb(194, 211, 79) !important;
+}
+.main_top{
+    margin-top: 50px;
+    width: 100%;
+}
+.main_top h1{
+    padding: 10px;
+    font-size: 50px;
+    text-align: center
+}
+.main_top>.slogon_desc{
+    padding: 10px;
+    font-size: 20px;
+    text-align: center
+}
+.main_top>button{
+    display: block;
+    padding: 10px 30px;
+    background-color: rgb(160, 207, 79);
+    margin:10px auto;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    color: #fff
+}
+a:link,a:visited{
+    color:inherit /* 继承父容器颜色，如果定死了否则鼠标悬停不会变色，color是就近原则的*/
+}
+
+
